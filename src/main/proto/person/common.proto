@@ -1,0 +1,11 @@
+syntax = "proto3";
+package person;
+option java_package = "com.test.protobuf.common";
+option java_outer_classname = "CommonProto";
+option java_multiple_files = true;
+
+enum Gender{
+ UNKNOWN = 0;
+ MALE = 1;
+ FEMALE = 2;
+}

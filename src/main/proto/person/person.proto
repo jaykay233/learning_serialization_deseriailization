@@ -1,0 +1,22 @@
+syntax = "proto3";
+package person;
+
+option java_package = "com.test.protobuf.person";
+option java_outer_classname = "PersonProto";
+option java_multiple_files = true;
+
+import "person/common.proto";
+
+message EducationInfo{
+  string school = 1;
+  int32 year = 2;
+}
+
+message Person{
+  string name = 1;
+  int32 age = 2;
+  double height = 3;
+  person.Gender gender = 4;
+  repeated EducationInfo edu_infos = 5;
+  map<string,string> friend_infos = 6;
+}
